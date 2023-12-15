@@ -11,6 +11,15 @@ class Dare_spicyController extends Controller
 
     // Accéder à la liste de toutes les actions épicées
 
+                /**
+     * @OA\Get(
+     *      path="/api/dareSpicy",
+     *      @OA\Response(
+     *          response="200",
+     *          description= "Les Actions du mode Epicé")
+     *      )
+     * )
+     */
     public function index(){
 
         $dare_spicy = Dare_spicy::all();

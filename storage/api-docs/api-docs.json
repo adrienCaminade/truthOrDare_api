@@ -1,0 +1,66 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Truth Or Dare API",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://truthordareapi.creativedev.fr",
+            "description": "Une API d'un jeu Action ou Vérité"
+        }
+    ],
+    "paths": {
+        "/api/dareClassic": {
+            "get": {
+                "operationId": "d4c684845577c2b68fa687370a926e43",
+                "responses": {
+                    "200": {
+                        "description": "Les Actions du mode Classique"
+                    }
+                }
+            }
+        },
+        "/api/dareSpicy": {
+            "get": {
+                "operationId": "31408cf300fa0acdcb823f0cf170135f",
+                "responses": {
+                    "200": {
+                        "description": "Les Actions du mode Epicé"
+                    }
+                }
+            }
+        },
+        "/api/truthClassic": {
+            "get": {
+                "operationId": "24eb690e366a72c1a7923df0dfc093aa",
+                "responses": {
+                    "200": {
+                        "description": "Les Vérités du mode Classique"
+                    }
+                }
+            }
+        },
+        "/api/truthSpicy": {
+            "get": {
+                "operationId": "836ffdb489d5f470a5049a7fea078019",
+                "responses": {
+                    "200": {
+                        "description": "Les Vérités du mode Epicé"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "name": "bearerAuth",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    }
+}

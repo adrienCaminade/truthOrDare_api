@@ -5,6 +5,7 @@ use App\Http\Controllers\Dare_spicyController;
 use App\Http\Controllers\Truth_classicController;
 use App\Http\Controllers\Truth_spicyController;
 use Illuminate\Support\Facades\Route;
+use L5Swagger\L5Swagger;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,17 +17,27 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
 
 Route::get('/', function () {
-    return view('home'); // Ceci est la vue Laravel qui chargera le composant Vue.js
+    return view('vendor.l5-swagger.index');
 });
+
+*/
+
+
+
 
 
 
 
 /*** API PART ***/
 
+
+
 Route::get('/api/dareClassic', [Dare_classicController::class, 'index']);
 Route::get('/api/truthClassic', [Truth_classicController::class, 'index']);
 Route::get('/api/dareSpicy', [Dare_spicyController::class, 'index']);
 Route::get('/api/truthSpicy', [Truth_spicyController::class, 'index']);
+
+

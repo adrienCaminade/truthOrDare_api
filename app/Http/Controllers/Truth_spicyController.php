@@ -11,6 +11,15 @@ class Truth_spicyController extends Controller
 
     // Accéder à la liste de toutes les vérités épicées
 
+                    /**
+     * @OA\Get(
+     *      path="/api/truthSpicy",
+     *      @OA\Response(
+     *          response="200",
+     *          description= "Les Vérités du mode Epicé")
+     *      )
+     * )
+     */
     public function index(){
 
         $truth_spicy = Truth_spicy::all();

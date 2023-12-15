@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dare_classic;
 use Illuminate\Http\Request;
+use OpenApi\Annotations as OA;
 
 class Dare_classicController extends Controller
 {
@@ -26,6 +27,15 @@ class Dare_classicController extends Controller
 
     // Accéder à la liste de toutes les actions classiques
 
+        /**
+     * @OA\Get(
+     *      path="/api/dareClassic",
+     *      @OA\Response(
+     *          response="200",
+     *          description= "Les Actions du mode Classique")
+     *      )
+     * )
+     */
     public function index(){
 
         $dare_classic = Dare_classic::all();
